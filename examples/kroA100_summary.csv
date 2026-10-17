@@ -1,0 +1,4 @@
+name,pop_size,epochs,greedy_count,px,pm,elite_count,tournament_size,mutation,print_every,patience,best_score
+inv_pm0.05,160,350,5,0.9,0.05,3,5,inversion,0,80,23450.0
+inv_pm0.02,160,350,5,0.9,0.02,3,5,inversion,0,80,24152.0
+swap_pm0.02,160,350,5,0.9,0.02,3,5,swap,0,80,24425.0
