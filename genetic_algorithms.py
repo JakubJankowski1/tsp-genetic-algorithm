@@ -189,7 +189,7 @@ def greedy_all_starts_stats(problem: TSPProblem, full_log: bool = False) -> dict
         tours.append(t)
         scores.append(s)
 
-        # requirement: print results for each start city
+        # Report each start city's route and score, or only its score in compact mode.
         if full_log:
             print_solution_info(t, problem, label=f"[start {start}] ")
         else:
@@ -238,7 +238,7 @@ def random_stats(problem: TSPProblem, n: int = 100, seed: int = 123, full_log: b
         s = fitness_length(t, problem)
         scores[i] = s
 
-        # requirement: print info for random solutions
+        # Report each sampled route and score, or only its score in compact mode.
         if full_log:
             print_solution_info(t, problem, label=f"[rand {i+1}] ")
         else:
@@ -657,7 +657,7 @@ if __name__ == "__main__":
     print("berlin11_modified head:\n", problems["berlin11_modified"].df.head(), "\n")
     print("berlin52 head:\n", problems["berlin52"].df.head(), "\n")
 
-    # Part 2 checklist required
+    # Run the benchmark and diagnostic suite for both reference instances.
     base11 = run_part2_checklist(problems["berlin11_modified"], tag="berlin11_modified", seed=42, random_n=100, full_log=FULL_LOG)
     base52 = run_part2_checklist(problems["berlin52"], tag="berlin52", seed=42, random_n=100, full_log=FULL_LOG)
 
